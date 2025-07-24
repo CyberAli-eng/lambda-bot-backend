@@ -3,6 +3,7 @@ uvicorn
 pydantic
 langchain
 langchain-community
+langchain-openai 
 openai
 chromadb
 python-dotenv
