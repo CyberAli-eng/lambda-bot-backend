@@ -6,3 +6,5 @@ chromadb
 python-dotenv
 requests
 sentence-transformers
+langchain-community
+pydantic
