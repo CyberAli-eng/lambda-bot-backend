@@ -19,10 +19,6 @@ app.add_middleware(
 )
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-
-
-
-
 class Query(BaseModel):
     question: str
 
@@ -39,3 +35,11 @@ def ask(query: Query):
     except Exception as e:
         logging.error(f"Error while answering: {query.question} -> {e}")
         return {"error": f"Something went wrong: {str(e)}"}
+
+
+if __name__ == "__main__":
+    import os
+    import uvicorn
+    port = int(os.environ.get("PORT", 10000))  # Render sets this
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)
+
