@@ -1,10 +1,10 @@
 fastapi
 uvicorn
+pydantic
 langchain
+langchain-community
 openai
 chromadb
 python-dotenv
 requests
 sentence-transformers
-langchain-community
-pydantic
