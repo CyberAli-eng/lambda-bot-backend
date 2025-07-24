@@ -3,6 +3,7 @@ uvicorn
 pydantic
 langchain
 langchain-community
+langchain_huggingface 
 langchain-openai 
 openai
 chromadb
