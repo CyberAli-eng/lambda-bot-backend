@@ -8,9 +8,14 @@ import os
 import re
 import subprocess
 
-# === OpenRouter API Setup ===
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY", "")
-os.environ["OPENAI_API_BASE"] = "https://openrouter.ai/api/v1"
+from dotenv import load_dotenv
+load_dotenv()
+
+# Now you can access:
+# os.getenv("OPENAI_API_KEY")
+# os.getenv("OPENAI_API_BASE")'
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+os.environ["OPENAI_API_BASE"] = os.getenv("OPENAI_API_BASE")
 
 DB_DIR = "./chroma_db"
 COLLECTION_NAME = "lambdatest_docs"
