@@ -1,3 +1,3 @@
 #!/bin/bash
-python embed_doc.py
+python embed_docs.py
 python main.py
