@@ -3,9 +3,9 @@ import requests
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 
-# ⚠️ Best Practice: Use env variable instead of hardcoding in production
+# Optional: the docs repo is public, so a token only raises the API rate limit.
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-headers = {"Authorization": f"token {GITHUB_TOKEN}"}
+headers = {"Authorization": f"token {GITHUB_TOKEN}"} if GITHUB_TOKEN else {}
 
 REPO = "CyberAli-eng/lambda-docs-bot"
 BRANCH = "main"
